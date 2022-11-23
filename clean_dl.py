@@ -61,10 +61,10 @@ def rm_dir(path, prefix=""):
     path.rmdir()
 
 def main():
-    parser = argparse.ArgumentParser(description='Siivoa polku.')
-    parser.add_argument('--dir', dest='dir', nargs='+', help='siivottavan kansion polku')
-    parser.add_argument('--ext', dest='ext', nargs='+', help='siivottavat tiedostotyypit')
-    parser.add_argument('--path', dest='paths', nargs='+', help='siivottavat kansiot')
+    parser = argparse.ArgumentParser(description='Clean a directory.')
+    parser.add_argument('--dir', dest='dir', nargs='+', help='Path/directory to clean')
+    parser.add_argument('--ext', dest='ext', nargs='+', help='A list of file extensions to clean')
+    parser.add_argument('--path', dest='paths', nargs='+', help='A glob pattern, matching folders will be cleaned recursively')
     args = parser.parse_args()
 
     this = pathlib.Path(__file__)
