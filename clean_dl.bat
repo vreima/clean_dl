@@ -1,4 +1,3 @@
 @echo off
-python "%USERPROFILE%\Documents\clean_dl.py" --dir "%USERPROFILE%\Downloads" --ext ifc ifczip bcf bcfzip zip pdf smc xlsx dwg ics msi exe --path "temp*"
-:: python "%USERPROFILE%\Documents\clean_dl.py" --dir "%USERPROFILE%\Desktop" --ext ifc zip pdf smc xlsx log bak dwg
+python "%~dp0clean_dl.py" --dir "%USERPROFILE%\Downloads" --ext ifc ifczip bcf bcfzip zip pdf smc xlsx xls csv docx dwg ics msi exe png jpg jpeg svg rvt --path "temp*"
 pause
